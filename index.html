@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
 <title>Ekumen Digital Solutions LLP: Networked intelligence, grounded in execution</title>
 <meta name="description" content="Ekumen Digital Solutions LLP. Enterprise digital transformation advisory and Shipmate, logistics intelligence software for India's freight and CFS operators.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%23C1542C'/><text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='400' fill='%23F4EFE6'>E</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ekumen.in/">
 <meta property="og:title" content="Ekumen Digital Solutions LLP: Networked intelligence, grounded in execution">
@@ -15,426 +19,616 @@
 <meta name="twitter:description" content="Enterprise digital transformation advisory and Shipmate, logistics intelligence software for India's freight and CFS operators.">
 
 <style>
-  :root{
-    --cream: #F4EFE6;
-    --cream-deep: #ECE4D4;
-    --charcoal: #2B2723;
-    --charcoal-soft: #4A4339;
-    --terracotta: #C1542C;
-    --terracotta-deep: #9A3F1F;
-    --warm-gray: #8A8275;
-    --line: #DCD3C2;
-    --display: "Century Schoolbook", "Sitka Text", Georgia, "Times New Roman", serif;
-    --body: Calibri, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    --max: 1100px;
+  :root {
+    --bg:             #07070D;
+    --bg-alt:         #0C0C14;
+    --surface:        #111119;
+    --surface-raised: #17171F;
+    --border:         #1C1C28;
+    --border-mid:     #252535;
+    --text:           #EEEEF4;
+    --text-2:         #86869A;
+    --text-3:         #42425A;
+    --accent:         #5B6BF5;
+    --accent-dim:     rgba(91,107,245,0.12);
+    --max:            1100px;
+    --font:           'Inter', system-ui, -apple-system, sans-serif;
+    --mono:           'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
   }
 
-  *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
-  body{
-    margin:0;
-    background: var(--cream);
-    color: var(--charcoal);
-    font-family: var(--body);
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
-  h1,h2,h3{
-    font-family: var(--display);
-    font-weight: 400;
-    margin: 0;
-    color: var(--charcoal);
-  }
+  a { color: inherit; text-decoration: none; }
 
-  a{ color: inherit; text-decoration: none; }
-
-  .wrap{
+  .wrap {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 28px;
+    padding: 0 32px;
   }
 
-  .eyebrow{
-    text-transform: uppercase;
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
     letter-spacing: 0.14em;
-    font-size: 0.72rem;
-    color: var(--terracotta-deep);
-    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-3);
+    display: block;
   }
 
-  /* ---------- Nav ---------- */
-  header{
+
+  /* ── Nav ───────────────────────────────── */
+  header {
     position: sticky;
     top: 0;
-    z-index: 50;
-    background: rgba(244,239,230,0.92);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    background: rgba(7,7,13,0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
   }
-  nav.wrap{
+
+  nav.wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 76px;
+    height: 62px;
   }
-  .wordmark{
-    font-family: var(--display);
-    font-size: 1.35rem;
-    letter-spacing: 0.01em;
-  }
-  .wordmark span{ color: var(--terracotta); }
-  .nav-links{
-    display: flex;
-    gap: 34px;
-    font-size: 0.92rem;
-  }
-  .nav-links a{
-    text-decoration: none;
-    color: var(--charcoal-soft);
-    transition: color .15s ease;
-  }
-  .nav-links a:hover{ color: var(--terracotta-deep); }
-  .nav-cta{
-    border: 1px solid var(--charcoal);
-    padding: 9px 18px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-size: 0.88rem;
-    white-space: nowrap;
-    transition: background .15s ease, color .15s ease;
-  }
-  .nav-cta:hover{ background: var(--charcoal); color: var(--cream); }
-  .nav-toggle{ display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--charcoal); }
 
-  /* ---------- Hero ---------- */
-  .hero{
-    position: relative;
-    padding: 96px 0 84px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--line);
-  }
-  .hero-grid{
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 48px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-  }
-  .hero h1{
-    font-size: clamp(2.3rem, 4.4vw, 3.6rem);
-    line-height: 1.12;
+  .wordmark {
+    font-size: 1.05rem;
+    font-weight: 600;
     letter-spacing: -0.01em;
   }
-  .hero h1 em{
-    font-style: italic;
-    color: var(--terracotta);
-  }
-  .hero p.lede{
-    margin-top: 22px;
-    font-size: 1.12rem;
-    color: var(--charcoal-soft);
-    max-width: 48ch;
-  }
-  .hero-ctas{
-    margin-top: 34px;
+  .wordmark span { color: var(--accent); }
+
+  .nav-links {
     display: flex;
-    gap: 16px;
+    gap: 34px;
+    font-size: 0.86rem;
+  }
+  .nav-links a {
+    color: var(--text-2);
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 7px 17px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { opacity: 0.82; }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+
+
+  /* ── Hero ───────────────────────────────── */
+  .hero {
+    padding: 96px 0 88px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, var(--border-mid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, var(--bg));
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .hero .mono-label {
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 5.8vw, 4.8rem);
+    font-weight: 300;
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .hero p.lede {
+    margin-top: 28px;
+    font-size: 1.05rem;
+    color: var(--text-2);
+    max-width: 54ch;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .hero-ctas {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
   }
-  .btn{
+
+
+  /* ── Buttons ───────────────────────────── */
+  .btn {
     display: inline-block;
-    padding: 13px 26px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: all .15s ease;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font);
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s;
+    line-height: 1.4;
   }
-  .btn-primary{
-    background: var(--terracotta);
-    color: var(--cream);
-    border: 1px solid var(--terracotta);
-  }
-  .btn-primary:hover{ background: var(--terracotta-deep); border-color: var(--terracotta-deep); }
-  .btn-ghost{
+
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { opacity: 0.82; }
+
+  .btn-ghost {
     background: transparent;
-    color: var(--charcoal);
-    border: 1px solid var(--charcoal);
+    color: var(--text-2);
+    border: 1px solid var(--border-mid);
   }
-  .btn-ghost:hover{ background: var(--charcoal); color: var(--cream); }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text-3); }
 
-  /* Constellation signature graphic */
-  .constellation{
-    width: 100%;
-    height: auto;
-    opacity: 0.92;
+
+  /* ── Section base ───────────────────────── */
+  section { padding: 84px 0; border-bottom: 1px solid var(--border); }
+
+  .section-header { margin-bottom: 44px; }
+  .section-header .mono-label { margin-bottom: 14px; }
+
+  h2 {
+    font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+    font-weight: 300;
+    letter-spacing: -0.028em;
+    line-height: 1.12;
+    color: var(--text);
   }
-  .constellation circle.node{ fill: var(--terracotta); }
-  .constellation circle.node.dim{ fill: var(--warm-gray); opacity: 0.55; }
-  .constellation line{ stroke: var(--charcoal-soft); stroke-width: 0.6; opacity: 0.35; }
+  h2 strong { font-weight: 600; }
 
-  /* ---------- Section base ---------- */
-  section{ padding: 88px 0; }
-  section.alt{ background: var(--cream-deep); }
-  .section-head{ max-width: 60ch; margin-bottom: 48px; }
-  .section-head h2{
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    margin-top: 10px;
+  .section-sub {
+    margin-top: 12px;
+    color: var(--text-2);
+    font-size: 0.98rem;
+    max-width: 56ch;
+    font-weight: 300;
+    line-height: 1.7;
   }
-  .section-head p{ color: var(--charcoal-soft); margin-top: 14px; font-size: 1.02rem; }
 
-  /* ---------- Two-track offering ---------- */
-  .tracks{
+
+  /* ── Bento grid (What we do) ────────────── */
+  .bento {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
   }
-  .track-card{
-    border: 1px solid var(--line);
-    background: var(--cream);
-    padding: 36px 32px;
-    border-radius: 3px;
+
+  .bento-card {
+    background: var(--surface);
+    padding: 40px 36px;
     position: relative;
+    transition: background 0.2s;
   }
-  .track-card.product{ background: var(--charcoal); color: var(--cream); border-color: var(--charcoal); }
-  .track-card.product .eyebrow{ color: var(--terracotta); }
-  .track-card.product p{ color: #D8D2C6; }
-  .track-card .eyebrow{ display:block; margin-bottom: 14px; }
-  .track-card h3{ font-size: 1.5rem; margin-bottom: 14px; }
-  .track-card p{ color: var(--charcoal-soft); font-size: 0.98rem; }
-  .track-card ul{
-    margin: 20px 0 0;
+  .bento-card:hover { background: var(--surface-raised); }
+  .bento-card.dark { background: var(--surface-raised); }
+
+  .bento-card .card-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .bento-card h3 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+
+  .bento-card p {
+    color: var(--text-2);
+    font-size: 0.9rem;
+    line-height: 1.72;
+    font-weight: 300;
+  }
+
+  .bento-card ul {
+    margin: 22px 0 0;
     padding: 0;
     list-style: none;
-    font-size: 0.92rem;
   }
-  .track-card ul li{
-    padding: 7px 0;
-    border-top: 1px solid var(--line);
-    color: var(--charcoal-soft);
-  }
-  .track-card.product ul li{ border-top: 1px solid rgba(244,239,230,0.15); color: #C9C2B4; }
 
-  /* Lifecycle spine tags inside Shipmate card */
-  .lifecycle{
+  .bento-card ul li {
+    padding: 9px 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-2);
+    font-size: 0.86rem;
+    font-weight: 300;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
-  }
-  .lifecycle span{
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border: 1px solid rgba(244,239,230,0.3);
-    color: #D8D2C6;
-    border-radius: 2px;
-  }
-  .lifecycle span.notbuilt{
-    color: #948C7D;
-    border-style: dashed;
+    gap: 10px;
+    align-items: baseline;
+    line-height: 1.55;
   }
 
-  .track-card .btn{ margin-top: 26px; }
+  .bento-card ul li::before {
+    content: '–';
+    color: var(--text-3);
+    flex-shrink: 0;
+    font-size: 0.8rem;
+  }
 
-  /* ---------- How we engage ---------- */
-  .engage-grid{
+  .bento-card .btn { margin-top: 28px; }
+
+
+  /* ── Engage ─────────────────────────────── */
+  .engage-section { background: var(--bg-alt); }
+
+  .engage-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
   }
-  .engage-step{
-    padding: 0;
+
+  .engage-step {
+    background: var(--bg-alt);
+    padding: 36px 32px;
+    transition: background 0.2s;
   }
-  .engage-step .step-num{
-    font-family: var(--display);
-    font-size: 0.85rem;
-    color: var(--terracotta);
+  .engage-step:hover { background: var(--surface); }
+
+  .engage-step .step-num {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .engage-step .step-phase {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-3);
     display: block;
     margin-bottom: 10px;
   }
-  .engage-step h3{ font-size: 1.2rem; margin-bottom: 4px; }
-  .engage-step .step-label{
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--warm-gray);
-    display: block;
+
+  .engage-step h3 {
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
     margin-bottom: 12px;
+    color: var(--text);
   }
-  .engage-step p{ color: var(--charcoal-soft); font-size: 0.95rem; }
 
-  /* ---------- Philosophy ---------- */
-  .philosophy{
+  .engage-step p {
+    color: var(--text-2);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+
+  /* ── Philosophy ─────────────────────────── */
+  .philosophy-inner {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 56px;
-    align-items: center;
-  }
-  .philosophy blockquote{
-    margin: 0;
-    font-family: var(--display);
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: var(--charcoal);
-    font-style: italic;
-  }
-  .philosophy blockquote span{ color: var(--terracotta); font-style: normal; }
-  .philosophy .attribution{
-    margin-top: 18px;
-    font-size: 0.85rem;
-    color: var(--warm-gray);
-    font-style: normal;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+    align-items: start;
+    padding: 16px 0;
   }
 
-  /* ---------- Credibility map ---------- */
-  .map-grid{
+  blockquote {
+    font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+  blockquote em { font-style: normal; color: var(--accent); font-weight: 400; }
+
+  .attribution {
+    margin-top: 22px;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+
+  /* ── Credibility ─────────────────────────── */
+  .cred-section { background: var(--bg-alt); }
+
+  .cred-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
   }
-  .map-item{
-    background: var(--cream);
-    padding: 28px 30px;
-  }
-  .map-item .num{
-    font-family: var(--display);
-    color: var(--terracotta);
-    font-size: 0.95rem;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .map-item p{ margin: 0; font-size: 0.96rem; color: var(--charcoal-soft); }
 
-  /* ---------- Team ---------- */
-  .team-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-  }
-  .team-card{
-    border: 1px solid var(--line);
+  .cred-item {
+    background: var(--bg-alt);
     padding: 32px;
-    background: var(--cream);
+    transition: background 0.2s;
   }
-  .team-card .initials{
-    width: 52px; height: 52px;
-    border-radius: 50%;
-    background: var(--terracotta);
-    color: var(--cream);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--display);
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-  }
-  .team-card h3{ font-size: 1.25rem; }
-  .team-card .role{ color: var(--terracotta-deep); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 6px 0 14px; }
-  .team-card p.bio{ color: var(--charcoal-soft); font-size: 0.95rem; }
-  .team-card a.linkedin{
-    display: inline-block;
-    margin-top: 16px;
-    font-size: 0.85rem;
-    text-decoration: underline;
-    color: var(--charcoal-soft);
+  .cred-item:hover { background: var(--surface); }
+
+  .cred-item .num {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 14px;
   }
 
-  /* ---------- Contact ---------- */
-  .contact-grid{
+  .cred-item p {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    font-weight: 300;
+    line-height: 1.68;
+  }
+
+
+  /* ── Team ───────────────────────────────── */
+  .team-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 56px;
-  }
-  .contact-info h2{ font-size: clamp(1.7rem, 3vw, 2.2rem); }
-  .contact-info p{ color: var(--charcoal-soft); margin-top: 16px; max-width: 42ch; }
-  .contact-info .email{
-    display: inline-block;
-    margin-top: 24px;
-    font-size: 1.05rem;
-    color: var(--terracotta-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--terracotta-deep);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
   }
 
-  form.contact-form{ display: flex; flex-direction: column; gap: 16px; }
-  .field{ display: flex; flex-direction: column; gap: 6px; }
-  .field label{ font-size: 0.82rem; color: var(--charcoal-soft); letter-spacing: 0.02em; }
-  .field input, .field select, .field textarea{
-    font-family: var(--body);
-    font-size: 0.98rem;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    background: var(--cream);
-    color: var(--charcoal);
-    border-radius: 2px;
+  .team-card {
+    background: var(--surface);
+    padding: 36px;
+    transition: background 0.2s;
   }
-  .field input:focus, .field select:focus, .field textarea:focus{
-    outline: 2px solid var(--terracotta);
-    outline-offset: 1px;
-  }
-  .field textarea{ resize: vertical; min-height: 110px; }
-  .contact-form .btn{ align-self: flex-start; border:none; cursor: pointer; }
+  .team-card:hover { background: var(--surface-raised); }
 
-  /* ---------- Footer ---------- */
-  footer{
-    border-top: 1px solid var(--line);
-    padding: 36px 0;
+  .team-card .initials {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 1px solid rgba(91,107,245,0.35);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
   }
-  footer .wrap{
+
+  .team-card h3 {
+    font-size: 1.12rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .team-card .role {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 8px 0 16px;
+    display: block;
+  }
+
+  .team-card p.bio {
+    color: var(--text-2);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.72;
+  }
+
+
+  /* ── Contact ────────────────────────────── */
+  .contact-section { background: var(--bg-alt); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .contact-info p {
+    margin-top: 16px;
+    color: var(--text-2);
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: 38ch;
+  }
+
+  form.contact-form { display: flex; flex-direction: column; gap: 14px; }
+
+  .field { display: flex; flex-direction: column; gap: 7px; }
+
+  .field label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .field input, .field select, .field textarea {
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 11px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    color: var(--text);
+    border-radius: 6px;
+    transition: border-color 0.15s;
+  }
+
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2342425A' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .field select option { background: var(--surface); }
+
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .field textarea { resize: vertical; min-height: 100px; }
+  .contact-form .btn { align-self: flex-start; margin-top: 4px; }
+
+
+  /* ── Footer ─────────────────────────────── */
+  footer {
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
-    font-size: 0.82rem;
-    color: var(--warm-gray);
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
   }
 
-  /* ---------- Reveal on scroll ---------- */
-  .reveal{ opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.visible{ opacity: 1; transform: translateY(0); }
 
-  @media (prefers-reduced-motion: reduce){
-    .reveal{ opacity:1; transform:none; transition:none; }
-    html{ scroll-behavior: auto; }
+  /* ── Reveal ─────────────────────────────── */
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
   }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 860px){
-    .hero-grid{ grid-template-columns: 1fr; }
-    .hero .constellation-wrap{ order: -1; max-width: 280px; margin: 0 auto 12px; }
-    .tracks{ grid-template-columns: 1fr; }
-    .engage-grid{ grid-template-columns: 1fr; gap: 36px; }
-    .philosophy{ grid-template-columns: 1fr; gap: 30px; }
-    .map-grid{ grid-template-columns: 1fr; }
-    .team-grid{ grid-template-columns: 1fr; }
-    .contact-grid{ grid-template-columns: 1fr; }
-    .nav-links{
+
+  /* ── Responsive ─────────────────────────── */
+  @media (max-width: 860px) {
+    .bento { grid-template-columns: 1fr; }
+    .engage-grid { grid-template-columns: 1fr; }
+    .philosophy-inner { grid-template-columns: 1fr; gap: 28px; }
+    .cred-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+
+    .nav-links {
       display: none;
       position: absolute;
-      top: 76px;
-      left: 0; right: 0;
+      top: 62px;
+      left: 0;
+      right: 0;
       flex-direction: column;
       gap: 0;
-      background: rgba(244,239,230,0.97);
-      border-bottom: 1px solid var(--line);
-      padding: 8px 28px 16px;
+      background: rgba(7,7,13,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 32px 16px;
+      backdrop-filter: blur(14px);
     }
-    .nav-links.open{ display: flex; }
-    .nav-links a{ padding: 12px 0; border-bottom: 1px solid var(--line); }
-    .nav-links a:last-child{ border-bottom: none; }
-    .nav-cta{ display: none; }
-    .nav-toggle{ display: block; }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .nav-links a:last-child { border-bottom: none; }
+    .nav-cta { display: none; }
+    .nav-toggle { display: block; }
   }
 </style>
 </head>
 <body>
 
+<!-- ── Nav ── -->
 <header>
   <nav class="wrap">
     <div class="wordmark">Ek<span>u</span>men</div>
@@ -449,59 +643,33 @@
   </nav>
 </header>
 
+
+<!-- ── Hero ── -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Ekumen Digital Solutions LLP</span>
-      <h1 style="margin-top:14px;">From inference<br>to <em>outcome</em>.</h1>
-      <p class="lede">Where signal-level engineering meets enterprise-scale delivery. We help enterprises turn AI and data into systems that run, alongside Shipmate, our logistics intelligence platform for India's freight and CFS operators.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">Talk to us</a>
-        <a class="btn btn-ghost" href="#shipmate">Explore Shipmate</a>
-      </div>
-    </div>
-    <div class="constellation-wrap">
-      <!-- Signature element: a constellation of nodes, echoing the Ekumen as a federation of connected worlds -->
-      <svg class="constellation" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <line x1="80" y1="90" x2="200" y2="60"/>
-          <line x1="200" y1="60" x2="330" y2="110"/>
-          <line x1="80" y1="90" x2="140" y2="200"/>
-          <line x1="200" y1="60" x2="220" y2="190"/>
-          <line x1="330" y1="110" x2="300" y2="220"/>
-          <line x1="140" y1="200" x2="220" y2="190"/>
-          <line x1="220" y1="190" x2="300" y2="220"/>
-          <line x1="140" y1="200" x2="120" y2="310"/>
-          <line x1="220" y1="190" x2="240" y2="320"/>
-          <line x1="300" y1="220" x2="280" y2="330"/>
-          <line x1="120" y1="310" x2="240" y2="320"/>
-          <line x1="240" y1="320" x2="280" y2="330"/>
-        </g>
-        <circle class="node" cx="200" cy="60" r="7"/>
-        <circle class="node dim" cx="80" cy="90" r="5"/>
-        <circle class="node dim" cx="330" cy="110" r="5"/>
-        <circle class="node" cx="220" cy="190" r="8"/>
-        <circle class="node dim" cx="140" cy="200" r="5"/>
-        <circle class="node dim" cx="300" cy="220" r="5"/>
-        <circle class="node dim" cx="120" cy="310" r="5"/>
-        <circle class="node" cx="240" cy="320" r="6"/>
-        <circle class="node dim" cx="280" cy="330" r="5"/>
-      </svg>
+  <div class="wrap hero-inner">
+    <span class="mono-label">Ekumen Digital Solutions LLP</span>
+    <h1>From inference<br>to <em>outcome</em>.</h1>
+    <p class="lede">Where signal-level engineering meets enterprise-scale delivery. We help enterprises turn AI and data into systems that run, alongside Shipmate, our logistics intelligence platform for India's freight and CFS operators.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#contact">Talk to us</a>
+      <a class="btn btn-ghost" href="#shipmate">Explore Shipmate</a>
     </div>
   </div>
 </section>
 
+
+<!-- ── What we do ── -->
 <section id="what-we-do">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">What we do</span>
-      <h2>Two tracks. One discipline.</h2>
-      <p>Enterprise advisory and applied AI delivery, alongside Shipmate, our software platform for logistics intelligence.</p>
+    <div class="section-header reveal">
+      <span class="mono-label">What we do</span>
+      <h2><strong>Two tracks.</strong> One discipline.</h2>
+      <p class="section-sub">Enterprise advisory and applied AI delivery, alongside Shipmate, our software platform for logistics intelligence.</p>
     </div>
 
-    <div class="tracks">
-      <div class="track-card reveal">
-        <span class="eyebrow">Advisory &amp; Implementation</span>
+    <div class="bento reveal">
+      <div class="bento-card">
+        <span class="card-label">Advisory &amp; Implementation</span>
         <h3>Enterprise systems, built by people who've run them</h3>
         <p>From DSP firmware to ERP go-lives, we bring both ends of the stack: the signal layer that must be designed, and the enterprise system that must deliver it. We engage as builders, not framework consultants, and stay until it runs in production.</p>
         <ul>
@@ -513,15 +681,15 @@
         <a class="btn btn-ghost" href="#contact">Start a conversation</a>
       </div>
 
-      <div class="track-card product" id="shipmate">
-        <span class="eyebrow">Product</span>
+      <div class="bento-card dark" id="shipmate">
+        <span class="card-label">Product</span>
         <h3>Shipmate</h3>
         <p>A logistics intelligence platform for India's freight forwarding and CFS operators. Shipmate brings visibility to billing, compliance, and recovery questions that today live in spreadsheets and tribal knowledge, with deeper operational integration on the roadmap.</p>
         <ul>
           <li>Billing and tariff visibility across operator systems</li>
           <li>Compliance and long-stay container tracking</li>
           <li>Recovery and drawback identification</li>
-          <li>Built as an evolving platform, from analytics today toward deeper workflow integration</li>
+          <li>Built as an evolving platform — from analytics toward deeper workflow integration</li>
         </ul>
         <a class="btn btn-primary" href="#contact">Request a pilot conversation</a>
       </div>
@@ -529,28 +697,31 @@
   </div>
 </section>
 
-<section class="alt">
+
+<!-- ── How we engage ── -->
+<section class="engage-section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">How we engage</span>
-      <h2>We do not arrive with a solution looking for a problem.</h2>
+    <div class="section-header reveal">
+      <span class="mono-label">How we engage</span>
+      <h2>We do not arrive with a <strong>solution looking for a problem.</strong></h2>
     </div>
+
     <div class="engage-grid reveal">
       <div class="engage-step">
         <span class="step-num">01</span>
-        <span class="step-label">Diagnose</span>
+        <span class="step-phase">Diagnose</span>
         <h3>Embedded discovery</h3>
-        <p>We enter as thinking partners. Short, bounded engagements to map the data landscape and identify where AI can create durable value, and where it will fail.</p>
+        <p>We enter as thinking partners. Short, bounded engagements to map the data landscape and identify where AI can create durable value — and where it will fail.</p>
       </div>
       <div class="engage-step">
         <span class="step-num">02</span>
-        <span class="step-label">Define</span>
+        <span class="step-phase">Define</span>
         <h3>Problem articulation</h3>
         <p>We help frame the problem worth solving in terms of outcome, not technology. The output is a problem definition your team recognises as true, and leadership can fund.</p>
       </div>
       <div class="engage-step">
         <span class="step-num">03</span>
-        <span class="step-label">Build</span>
+        <span class="step-phase">Build</span>
         <h3>Selective execution</h3>
         <p>Where the problem warrants it, we design and build: an inference pipeline, an operational layer, a process redesign. We measure ourselves by what runs in production.</p>
       </div>
@@ -558,40 +729,47 @@
   </div>
 </section>
 
+
+<!-- ── Philosophy ── -->
 <section>
-  <div class="wrap philosophy reveal">
-    <div>
-      <span class="eyebrow">Why Ekumen</span>
-    </div>
-    <div>
-      <blockquote>
-        The Ekumen, in Le Guin's universe, was never an empire. It was a federation of worlds that <span>shared knowledge on equal terms.</span> That is the operating premise here: intelligence that moves across systems, sectors, and borders, without forcing every problem into the same template.
-      </blockquote>
-      <div class="attribution">The name, and the reasoning behind it.</div>
+  <div class="wrap">
+    <div class="philosophy-inner reveal">
+      <div>
+        <span class="mono-label">Why Ekumen</span>
+      </div>
+      <div>
+        <blockquote>
+          The Ekumen, in Le Guin's universe, was never an empire. It was a federation of worlds that <em>shared knowledge on equal terms.</em> That is the operating premise here: intelligence that moves across systems, sectors, and borders, without forcing every problem into the same template.
+        </blockquote>
+        <div class="attribution">The name, and the reasoning behind it.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+
+<!-- ── Credibility ── -->
+<section class="cred-section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Where we've operated</span>
-      <h2>Built from inside the systems we now advise on.</h2>
+    <div class="section-header reveal">
+      <span class="mono-label">Where we've operated</span>
+      <h2>Built from inside the <strong>systems we now advise on.</strong></h2>
     </div>
-    <div class="map-grid reveal">
-      <div class="map-item">
+
+    <div class="cred-grid reveal">
+      <div class="cred-item">
         <span class="num">01</span>
         <p>Enterprise digital transformation and ERP delivery across 18+ countries, spanning healthcare, industrial, and regulated multinational environments.</p>
       </div>
-      <div class="map-item">
+      <div class="cred-item">
         <span class="num">02</span>
         <p>Patent-held signal processing and ML systems work, from telecom physical-layer firmware to applied AI on satellite imagery.</p>
       </div>
-      <div class="map-item">
+      <div class="cred-item">
         <span class="num">03</span>
         <p>didyoubeattheindex.com, a financial benchmarking product conceived, built, and shipped independently, live today.</p>
       </div>
-      <div class="map-item">
+      <div class="cred-item">
         <span class="num">04</span>
         <p>A sensor-based gait and sleep recovery scoring system, combining biomechanics analysis with embedded inference.</p>
       </div>
@@ -599,34 +777,39 @@
   </div>
 </section>
 
+
+<!-- ── Team ── -->
 <section id="team">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Team</span>
-      <h2>Two founders, not a bench.</h2>
+    <div class="section-header reveal">
+      <span class="mono-label">Team</span>
+      <h2>Two founders, <strong>not a bench.</strong></h2>
     </div>
+
     <div class="team-grid reveal">
       <div class="team-card">
         <div class="initials">AK</div>
         <h3>Ashwin Kumar N</h3>
-        <div class="role">Co-founder, Delivery &amp; Enterprise Systems</div>
+        <span class="role">Co-founder · Delivery &amp; Enterprise Systems</span>
         <p class="bio">Two decades in enterprise ERP and digital transformation across Capgemini, GE Healthcare, and TCS, delivered across 18+ countries. Led 30+ person SAP, Oracle, and Azure delivery programmes for European and Indian majors, and built an Oracle ERP practice from the ground up across five geographies.</p>
       </div>
       <div class="team-card">
         <div class="initials">KN</div>
         <h3>Karthik Nagasubramanian</h3>
-        <div class="role">Co-founder, Signal, Inference &amp; ML Systems</div>
+        <span class="role">Co-founder · Signal, Inference &amp; ML Systems</span>
         <p class="bio">15+ years across Intel, Samsung Research, LitePoint, and Motorola. Built DSP firmware for 4G/5G physical layer systems, co-invented a WCDMA cell detection patent, and has applied ML to satellite imagery and sensor fusion. MS EE, Texas A&amp;M.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt" id="contact">
+
+<!-- ── Contact ── -->
+<section class="contact-section" id="contact">
   <div class="wrap contact-grid">
     <div class="contact-info reveal">
-      <span class="eyebrow">Contact</span>
-      <h2 style="margin-top:10px;">Let's talk.</h2>
+      <span class="mono-label">Contact</span>
+      <h2 style="margin-top:12px;">Let's talk.</h2>
       <p>Whether it's an advisory engagement, a Shipmate conversation, or something that doesn't fit either box yet, we would like to hear about it.</p>
     </div>
     <div class="reveal">
@@ -651,24 +834,39 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button class="btn btn-primary" type="submit">Send</button>
+        <button class="btn btn-primary" type="submit">Send message</button>
       </form>
     </div>
   </div>
 </section>
 
+
+<!-- ── Footer ── -->
 <footer>
   <div class="wrap">
-    <div>© <span id="year"></span> Ekumen Digital Solutions LLP. All rights reserved.</div>
+    <div>© <span id="year"></span> Ekumen Digital Solutions LLP</div>
     <div>Bengaluru, India</div>
   </div>
 </footer>
 
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  const toReveal = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    toReveal.forEach(el => io.observe(el));
+  } else {
+    toReveal.forEach(el => el.classList.add('visible'));
+  }
+
   const navToggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks  = document.querySelector('.nav-links');
   navToggle.addEventListener('click', () => {
     const open = navLinks.classList.toggle('open');
     navToggle.textContent = open ? '✕' : '☰';
@@ -679,21 +877,6 @@
     navToggle.textContent = '☰';
     navToggle.setAttribute('aria-expanded', 'false');
   }));
-
-  const toReveal = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    toReveal.forEach(el => io.observe(el));
-  } else {
-    toReveal.forEach(el => el.classList.add('visible'));
-  }
 </script>
 
 </body>
