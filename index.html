@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ekumen.in/">
 <meta property="og:title" content="Ekumen Digital Solutions LLP: Networked intelligence, grounded in execution">
@@ -33,6 +33,7 @@
     --accent-dim:     rgba(69,80,229,0.07);
     --max:            1100px;
     --font:           'Inter', system-ui, -apple-system, sans-serif;
+    --display:        'Space Grotesk', 'Inter', system-ui, sans-serif;
     --mono:           'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
   }
 
@@ -49,6 +50,8 @@
   }
 
   a { color: inherit; text-decoration: none; }
+
+  h1, h2, h3 { font-family: var(--display); }
 
   .wrap {
     max-width: var(--max);
@@ -85,7 +88,8 @@
   }
 
   .wordmark {
-    font-size: 1.05rem;
+    font-family: var(--display);
+    font-size: 1.15rem;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
