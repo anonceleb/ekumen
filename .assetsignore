@@ -1,0 +1,12 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+.claude
+.claude/**
+node_modules
+node_modules/**
+wrangler.jsonc
+.assetsignore
+package.json
+package-lock.json
