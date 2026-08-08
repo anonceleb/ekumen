@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <title>Knowledge Centre — Ekumen Digital Solutions LLP</title>
-<meta name="description" content="Reference guides on Indian freight forwarding: documentation, Incoterms, customs process, and compliance mechanics.">
+<meta name="description" content="Plain guides to Indian freight forwarding: the players, the paperwork, the charges, and the rules. Start with the workflow, the documents and the glossary.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ekumen.in/knowledge/">
 <meta property="og:title" content="Knowledge Centre — Ekumen Digital Solutions LLP">
-<meta property="og:description" content="Reference guides on Indian freight forwarding: documentation, Incoterms, customs process, and compliance mechanics.">
+<meta property="og:description" content="Plain guides to Indian freight forwarding: the players, the paperwork, the charges, and the rules. Start with the workflow, the documents and the glossary.">
 
 <style>
   :root {
@@ -169,6 +169,67 @@
     font-weight: 300;
   }
 
+  .start-section {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0 52px;
+  }
+  .start-section .mono-label { color: var(--accent); }
+  .start-header { margin-bottom: 26px; }
+  .start-header h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-top: 8px;
+  }
+  .start-header p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-2);
+    max-width: 62ch;
+  }
+
+  .start-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .start-card {
+    background: var(--surface);
+    border: 1px solid var(--border-mid);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .start-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .start-card .step {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .start-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 9px;
+  }
+  .start-card p {
+    color: var(--text-2);
+    font-size: 0.86rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .start-card .meta { margin-top: auto; padding-top: 18px; }
+
   .category-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
   .category-section:last-of-type { border-bottom: none; }
 
@@ -194,6 +255,8 @@
     background: var(--surface);
     padding: 28px;
     transition: background 0.15s;
+    display: flex;
+    flex-direction: column;
   }
   .guide-card:hover { background: var(--surface-raised); }
 
@@ -201,8 +264,17 @@
     font-size: 1.05rem;
     font-weight: 500;
     letter-spacing: -0.01em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--text);
+  }
+
+  .guide-card .dek {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--text-3);
+    margin-bottom: 11px;
+    line-height: 1.45;
   }
 
   .guide-card p {
@@ -210,6 +282,18 @@
     font-size: 0.88rem;
     font-weight: 300;
     line-height: 1.65;
+  }
+
+  .guide-card p .q { color: var(--text); font-weight: 400; }
+
+  .guide-card .meta { margin-top: auto; padding-top: 20px; }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
   }
 
   footer {
@@ -227,6 +311,10 @@
     font-size: 0.65rem;
     letter-spacing: 0.08em;
     color: var(--text-3);
+  }
+
+  @media (max-width: 860px) {
+    .start-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 700px) {
@@ -255,8 +343,38 @@
 <section class="page-header">
   <div class="wrap">
     <span class="mono-label">Knowledge Centre</span>
-    <h1 class="title">Reference, not opinion.</h1>
-    <p class="lede">Working guides on how Indian freight forwarding actually operates: the documents, the process, and the compliance mechanics. Built for reference, kept apart from the blog's field notes and running commentary.</p>
+    <h1 class="title">How the trade actually works.</h1>
+    <p class="lede">Plain guides to Indian freight forwarding — the players, the paperwork, the charges, and the rules behind them. Every guide stands alone and defines its terms as it goes, so you can start anywhere. These are working references; the running field notes and commentary live on the <a href="/blog/" style="color:var(--accent)">blog</a>.</p>
+  </div>
+</section>
+
+<section class="start-section">
+  <div class="wrap">
+    <div class="start-header">
+      <span class="mono-label">Start here</span>
+      <h2>New to this? Read these three, in order.</h2>
+      <p>They assume nothing. Together they take about fifteen minutes and cover enough to make every other guide on this page readable.</p>
+    </div>
+    <div class="start-grid">
+      <a class="start-card" href="/knowledge/freight-forwarding-workflow.html">
+        <span class="step">01 &mdash; The map</span>
+        <h3>Freight forwarding workflow &amp; players</h3>
+        <p>Who the parties are and what each one actually does, from shipper to consignee — and the order things happen in.</p>
+        <span class="meta">4 min &middot; Foundation</span>
+      </a>
+      <a class="start-card" href="/knowledge/shipping-documents-explained.html">
+        <span class="step">02 &mdash; The paperwork</span>
+        <h3>Shipping documents explained</h3>
+        <p>Every shipment generates a stack of documents. This is what each one is for, and who issues it.</p>
+        <span class="meta">3 min &middot; Foundation</span>
+      </a>
+      <a class="start-card" href="/knowledge/glossary.html">
+        <span class="step">03 &mdash; The dictionary</span>
+        <h3>Glossary</h3>
+        <p>Every term and acronym used on this site, in one place. Worth keeping open in a tab while you read the rest.</p>
+        <span class="meta">9 min &middot; Reference</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -269,11 +387,15 @@
     <div class="guide-grid">
       <a class="guide-card" href="/knowledge/freight-forwarding-workflow.html">
         <h3>Freight forwarding workflow &amp; players</h3>
-        <p>Who does what in an international shipment, from shipper to consignee, and the step-by-step process that moves cargo between them.</p>
+        <span class="dek">The end-to-end picture, in sequence</span>
+        <p><span class="q">Who actually moves your cargo, and in what order?</span> The parties in an international shipment, from shipper to consignee, and the step-by-step process that connects them.</p>
+        <span class="meta">4 min &middot; Foundation</span>
       </a>
       <a class="guide-card" href="/knowledge/types-of-freight-forwarders-india.html">
         <h3>Types of freight forwarders &amp; how Indian FF is organised</h3>
-        <p>Ocean, air, multimodal and project forwarders explained, plus the licences and associations that structure the trade in India.</p>
+        <span class="dek">Ocean, air, multimodal, project — and who licenses them</span>
+        <p><span class="q">Which kind of forwarder do you need, and who vouches for them?</span> The four broad types explained, plus the licences and industry associations that structure the trade in India.</p>
+        <span class="meta">3 min &middot; Foundation</span>
       </a>
     </div>
   </div>
@@ -282,17 +404,21 @@
 <section class="category-section">
   <div class="wrap">
     <div class="category-header">
-      <span class="mono-label">Documentation</span>
-      <h2>What each document does, and what goes wrong with it</h2>
+      <span class="mono-label">Documentation &amp; Terminology</span>
+      <h2>What each document does, and what every term means</h2>
     </div>
     <div class="guide-grid">
       <a class="guide-card" href="/knowledge/shipping-documents-explained.html">
         <h3>Shipping documents explained</h3>
-        <p>Commercial, transport and regulatory documents in an international shipment, who issues each one, and the specific failure mode each is prone to.</p>
+        <span class="dek">Commercial, transport and regulatory paperwork</span>
+        <p><span class="q">Which piece of paper does what, and who issues it?</span> Every document in an international shipment, what it proves, and the specific failure mode each one is prone to.</p>
+        <span class="meta">3 min &middot; Foundation</span>
       </a>
       <a class="guide-card" href="/knowledge/glossary.html">
         <h3>Glossary</h3>
-        <p>Terms, acronyms and charge codes used across Indian freight forwarding, from AD Code to W/M.</p>
+        <span class="dek">Every term and charge code, A to Z</span>
+        <p><span class="q">What does that acronym mean?</span> The vocabulary used across Indian freight forwarding, from AD Code to W/M, defined in a line or two each.</p>
+        <span class="meta">9 min &middot; Reference</span>
       </a>
     </div>
   </div>
@@ -307,11 +433,15 @@
     <div class="guide-grid">
       <a class="guide-card" href="/knowledge/dpd-vs-cfs.html">
         <h3>DPD vs CFS</h3>
-        <p>The two routes a container can take out of an Indian port after customs clearance, and how to decide between them.</p>
+        <span class="dek">Direct Port Delivery vs Container Freight Station</span>
+        <p><span class="q">Should your container leave the port directly, or go via a warehouse?</span> The two routes out of an Indian port after customs clearance, and how to decide between them.</p>
+        <span class="meta">3 min &middot; Operational</span>
       </a>
       <a class="guide-card" href="/knowledge/demurrage-vs-detention.html">
         <h3>Demurrage vs Detention</h3>
-        <p>Two different charges, two different clocks, two different parties collecting them — and why the distinction matters.</p>
+        <span class="dek">The two clocks that charge you for time</span>
+        <p><span class="q">Why is your container racking up charges, and who is billing you?</span> Two different charges, two different clocks, two different parties collecting — and why confusing them is expensive.</p>
+        <span class="meta">3 min &middot; Operational</span>
       </a>
     </div>
   </div>
@@ -320,17 +450,21 @@
 <section class="category-section">
   <div class="wrap">
     <div class="category-header">
-      <span class="mono-label">Regulation &amp; Compliance</span>
-      <h2>The licences and status that shape how clearance works</h2>
+      <span class="mono-label">Rules &amp; Terms</span>
+      <h2>Who may act on your behalf, and who bears what</h2>
     </div>
     <div class="guide-grid">
       <a class="guide-card" href="/knowledge/cblr-and-aeo-explained.html">
         <h3>CBLR and AEO explained</h3>
-        <p>Who is allowed to clear customs on an importer's behalf, and the trade-facilitation status that rewards a clean compliance record.</p>
+        <span class="dek">Customs Brokers Licensing Regulations &middot; Authorised Economic Operator</span>
+        <p><span class="q">Who is allowed to clear customs for you, and can you earn faster treatment?</span> The licence that governs customs brokers, and the status that rewards a clean compliance record.</p>
+        <span class="meta">3 min &middot; Specialist</span>
       </a>
       <a class="guide-card" href="/knowledge/incoterms-2020-in-practice.html">
         <h3>Incoterms 2020 in practice</h3>
-        <p>All eleven terms, what each allocates, and the recurring errors that show up in Indian trade contracts.</p>
+        <span class="dek">The three letters in your contract that decide who pays</span>
+        <p><span class="q">Who pays the freight, and where does the risk pass?</span> All eleven terms, what each one allocates, and the recurring errors that show up in Indian trade contracts.</p>
+        <span class="meta">3 min &middot; Foundation</span>
       </a>
     </div>
   </div>
