@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Knowledge Centre — Ekumen Digital Solutions LLP</title>
+<meta name="description" content="Reference guides on Indian freight forwarding: documentation, Incoterms, customs process, and compliance mechanics.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ekumen.in/knowledge/">
+<meta property="og:title" content="Knowledge Centre — Ekumen Digital Solutions LLP">
+<meta property="og:description" content="Reference guides on Indian freight forwarding: documentation, Incoterms, customs process, and compliance mechanics.">
+
+<style>
+  :root {
+    --bg:             #FFFFFF;
+    --bg-alt:         #FAFAFA;
+    --surface:        #FFFFFF;
+    --surface-raised: #F4F4F6;
+    --border:         #EBEBEE;
+    --border-mid:     #DCDCE2;
+    --text:           #14141C;
+    --text-2:         #63636F;
+    --text-3:         #9C9CA8;
+    --accent:         #4550E5;
+    --max:            1100px;
+    --font:           'Inter', system-ui, -apple-system, sans-serif;
+    --display:        'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono:           'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    display: block;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+  }
+
+  .wordmark {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .wordmark span { color: var(--accent); }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 7px 17px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { opacity: 0.82; }
+
+  .page-header {
+    padding: 72px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+
+  h1.title {
+    font-size: clamp(2rem, 4.4vw, 2.9rem);
+    font-weight: 300;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+  }
+
+  .page-header p.lede {
+    margin-top: 20px;
+    font-size: 1.02rem;
+    color: var(--text-2);
+    max-width: 58ch;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .category-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .category-section:last-of-type { border-bottom: none; }
+
+  .category-header { margin-bottom: 28px; }
+  .category-header h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .guide-card {
+    background: var(--surface);
+    padding: 28px;
+    transition: background 0.15s;
+  }
+  .guide-card:hover { background: var(--surface-raised); }
+
+  .guide-card h3 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .guide-card p {
+    color: var(--text-2);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  footer {
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+  }
+
+  @media (max-width: 700px) {
+    .guide-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <span class="mono-label">Knowledge Centre</span>
+    <h1 class="title">Reference, not opinion.</h1>
+    <p class="lede">Working guides on how Indian freight forwarding actually operates: the documents, the process, and the compliance mechanics. Built for reference, kept apart from the blog's field notes and running commentary.</p>
+  </div>
+</section>
+
+<section class="category-section">
+  <div class="wrap">
+    <div class="category-header">
+      <span class="mono-label">Documentation</span>
+      <h2>What each document does, and what goes wrong with it</h2>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/knowledge/shipping-documents-explained.html">
+        <h3>Shipping documents explained</h3>
+        <p>Commercial, transport and regulatory documents in an international shipment, who issues each one, and the specific failure mode each is prone to.</p>
+      </a>
+      <a class="guide-card" href="/knowledge/glossary.html">
+        <h3>Glossary</h3>
+        <p>Terms, acronyms and charge codes used across Indian freight forwarding, from AD Code to W/M.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="category-section">
+  <div class="wrap">
+    <div class="category-header">
+      <span class="mono-label">Process &amp; Charges</span>
+      <h2>How cargo actually moves, and where the cost sits</h2>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/knowledge/dpd-vs-cfs.html">
+        <h3>DPD vs CFS</h3>
+        <p>The two routes a container can take out of an Indian port after customs clearance, and how to decide between them.</p>
+      </a>
+      <a class="guide-card" href="/knowledge/demurrage-vs-detention.html">
+        <h3>Demurrage vs Detention</h3>
+        <p>Two different charges, two different clocks, two different parties collecting them — and why the distinction matters.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="category-section">
+  <div class="wrap">
+    <div class="category-header">
+      <span class="mono-label">Regulation &amp; Compliance</span>
+      <h2>The licences and status that shape how clearance works</h2>
+    </div>
+    <div class="guide-grid">
+      <a class="guide-card" href="/knowledge/cblr-and-aeo-explained.html">
+        <h3>CBLR and AEO explained</h3>
+        <p>Who is allowed to clear customs on an importer's behalf, and the trade-facilitation status that rewards a clean compliance record.</p>
+      </a>
+      <a class="guide-card" href="/knowledge/incoterms-2020-in-practice.html">
+        <h3>Incoterms 2020 in practice</h3>
+        <p>All eleven terms, what each allocates, and the recurring errors that show up in Indian trade contracts.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

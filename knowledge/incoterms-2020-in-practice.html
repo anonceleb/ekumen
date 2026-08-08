@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Incoterms 2020 in practice — Ekumen</title>
+<meta name="description" content="All eleven Incoterms, what each allocates, and the recurring errors that show up in Indian trade contracts.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ekumen.in/knowledge/incoterms-2020-in-practice.html">
+<meta property="og:title" content="Incoterms 2020 in practice">
+<meta property="og:description" content="All eleven Incoterms, what each allocates, and the recurring errors that show up in Indian trade contracts.">
+
+<style>
+  :root {
+    --bg: #FFFFFF; --bg-alt: #FAFAFA; --surface: #FFFFFF; --surface-raised: #F4F4F6;
+    --border: #EBEBEE; --border-mid: #DCDCE2; --text: #14141C; --text-2: #63636F; --text-3: #9C9CA8;
+    --accent: #4550E5; --max: 1100px;
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+  .mono-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); display: block; }
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  nav.wrap { max-width: var(--max); display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .wordmark { font-family: var(--display); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+  .wordmark span { color: var(--accent); }
+  .nav-cta { font-size: 0.82rem; font-weight: 500; padding: 7px 17px; background: var(--accent); color: #fff; border-radius: 6px; transition: opacity 0.15s; white-space: nowrap; }
+  .nav-cta:hover { opacity: 0.82; }
+  .article-header { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
+  .back-link { display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 28px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .article-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+  h1.title { font-size: clamp(2rem, 4.4vw, 2.6rem); font-weight: 300; line-height: 1.14; letter-spacing: -0.03em; }
+  .article-header p.lede { margin-top: 18px; font-size: 1rem; color: var(--text-2); max-width: 58ch; line-height: 1.75; font-weight: 300; }
+  .article-body { padding: 44px 0 96px; }
+  .article-body p { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--text-2); margin-bottom: 20px; }
+  .article-body h2 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.015em; color: var(--text); margin: 40px 0 16px; }
+  .article-body ul, .article-body ol { margin: 0 0 20px; padding-left: 20px; color: var(--text-2); font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
+  .article-body li { margin-bottom: 8px; }
+  .table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--border); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: var(--bg-alt); text-align: left; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-2); font-weight: 300; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td strong, th strong { color: var(--text); font-weight: 500; }
+  .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 18px 20px; margin: 8px 0 28px; border-radius: 0 8px 8px 0; }
+  .callout p { margin-bottom: 0; font-size: 0.9rem; }
+  footer { padding: 26px 0; border-top: 1px solid var(--border); }
+  footer .wrap { max-width: var(--max); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+  </nav>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a class="back-link" href="/knowledge/">&larr; Back to Knowledge Centre</a>
+    <span class="mono-label">Regulation &amp; Compliance</span>
+    <h1 class="title">Incoterms 2020 in practice</h1>
+    <p class="lede">Incoterms allocate three things between a buyer and seller: cost, risk, and obligation. They do not allocate title, and they are not law — they apply only because a contract says they do.</p>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="wrap">
+    <p>For anyone arranging the movement, the term decides one practical question above the rest: who chooses, and who pays, the freight forwarder.</p>
+
+    <h2>All eleven terms</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Term</th><th>Name</th><th>Risk transfers</th><th>Who nominates the forwarder</th></tr>
+        <tr><td><strong>EXW</strong></td><td>Ex Works</td><td>At seller's premises</td><td>Buyer — maximum buyer control</td></tr>
+        <tr><td><strong>FCA</strong></td><td>Free Carrier</td><td>On delivery to the buyer's carrier</td><td>Buyer</td></tr>
+        <tr><td><strong>FAS</strong></td><td>Free Alongside Ship</td><td>Alongside the vessel at the named port</td><td>Buyer</td></tr>
+        <tr><td><strong>FOB</strong></td><td>Free On Board</td><td>When goods are on board the vessel</td><td>Buyer — the dominant term in Indian exports</td></tr>
+        <tr><td><strong>CFR</strong></td><td>Cost and Freight</td><td>On board at origin</td><td>Seller</td></tr>
+        <tr><td><strong>CIF</strong></td><td>Cost, Insurance and Freight</td><td>On board at origin</td><td>Seller</td></tr>
+        <tr><td><strong>CPT</strong></td><td>Carriage Paid To</td><td>On delivery to the first carrier</td><td>Seller</td></tr>
+        <tr><td><strong>CIP</strong></td><td>Carriage and Insurance Paid To</td><td>On delivery to the first carrier</td><td>Seller</td></tr>
+        <tr><td><strong>DAP</strong></td><td>Delivered At Place</td><td>At destination, not unloaded</td><td>Seller — carries destination risk</td></tr>
+        <tr><td><strong>DPU</strong></td><td>Delivered at Place Unloaded</td><td>At destination, once unloaded</td><td>Seller — the only term requiring the seller to unload</td></tr>
+        <tr><td><strong>DDP</strong></td><td>Delivered Duty Paid</td><td>At destination, cleared for import</td><td>Seller — maximum seller obligation</td></tr>
+      </table>
+    </div>
+
+    <h2>What changed in the 2020 revision</h2>
+    <ul>
+      <li>DAT became DPU (Delivered at Place Unloaded), removing the restriction to a "terminal."</li>
+      <li>CIP now requires all-risks insurance cover; CIF still requires only the minimum cover — a recurring source of under-insurance disputes when the two are confused.</li>
+      <li>FCA gained an on-board notation option, letting the buyer instruct the carrier to issue a bill of lading with an on-board notation to the seller — solving a long-standing problem for FCA sellers who need an on-board bill for a letter of credit.</li>
+      <li>Own-means-of-transport is explicitly recognised under FCA, DAP, DPU and DDP.</li>
+    </ul>
+
+    <h2>Six recurring errors</h2>
+    <ol>
+      <li><strong>Using FOB/CIF/CFR for containerised cargo.</strong> These terms were designed for bulk cargo loaded over a ship's rail. For containers handed over at a CFS or terminal days before loading, the seller retains risk during a period it does not control. FCA, CPT and CIP are the terms actually designed for containers — though FOB and CIF remain in near-universal use in Indian trade regardless.</li>
+      <li><strong>Naming no place.</strong> "CIF" alone is meaningless. It must specify a destination: "CIF Rotterdam, Incoterms® 2020."</li>
+      <li><strong>EXW for exports.</strong> Under EXW the buyer is responsible for export clearance — but a foreign buyer usually cannot file an Indian shipping bill or claim under the exporter's IEC. In practice the seller ends up doing it anyway, off-contract and unprotected. FCA is the safer default.</li>
+      <li><strong>DDP into an unfamiliar country.</strong> The seller becomes an importer of record somewhere it may not be able to register for VAT or claim input credit. A DDP quote into a new market should carry a large risk premium and an explicit carve-out for destination taxes.</li>
+      <li><strong>Assuming the Incoterm sets payment terms.</strong> It does not. CIF says nothing about when the buyer pays.</li>
+      <li><strong>Assuming the Incoterm transfers title.</strong> It does not. Title passes according to the sale contract and the applicable law, separately from the Incoterm.</li>
+    </ol>
+
+    <div class="callout">
+      <p>Most Indian exporters ship FOB because the overseas buyer insists on it — precisely because controlling the freight is valuable. The freight decision, and the margin that comes with it, follows whoever holds that control.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

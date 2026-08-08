@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Demurrage vs Detention — Ekumen</title>
+<meta name="description" content="Two different charges, two different clocks, two different parties collecting them — and why the distinction matters.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ekumen.in/knowledge/demurrage-vs-detention.html">
+<meta property="og:title" content="Demurrage vs Detention">
+<meta property="og:description" content="Two different charges, two different clocks, two different parties collecting them — and why the distinction matters.">
+
+<style>
+  :root {
+    --bg: #FFFFFF; --bg-alt: #FAFAFA; --surface: #FFFFFF; --surface-raised: #F4F4F6;
+    --border: #EBEBEE; --border-mid: #DCDCE2; --text: #14141C; --text-2: #63636F; --text-3: #9C9CA8;
+    --accent: #4550E5; --max: 1100px;
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+  .mono-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); display: block; }
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  nav.wrap { max-width: var(--max); display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .wordmark { font-family: var(--display); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+  .wordmark span { color: var(--accent); }
+  .nav-cta { font-size: 0.82rem; font-weight: 500; padding: 7px 17px; background: var(--accent); color: #fff; border-radius: 6px; transition: opacity 0.15s; white-space: nowrap; }
+  .nav-cta:hover { opacity: 0.82; }
+  .article-header { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
+  .back-link { display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 28px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .article-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+  h1.title { font-size: clamp(2rem, 4.4vw, 2.6rem); font-weight: 300; line-height: 1.14; letter-spacing: -0.03em; }
+  .article-header p.lede { margin-top: 18px; font-size: 1rem; color: var(--text-2); max-width: 58ch; line-height: 1.75; font-weight: 300; }
+  .article-body { padding: 44px 0 96px; }
+  .article-body p { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--text-2); margin-bottom: 20px; }
+  .article-body h2 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.015em; color: var(--text); margin: 40px 0 16px; }
+  .table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--border); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: var(--bg-alt); text-align: left; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-2); font-weight: 300; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td strong, th strong { color: var(--text); font-weight: 500; }
+  .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 18px 20px; margin: 8px 0 28px; border-radius: 0 8px 8px 0; }
+  .callout p { margin-bottom: 0; font-size: 0.9rem; }
+  footer { padding: 26px 0; border-top: 1px solid var(--border); }
+  footer .wrap { max-width: var(--max); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+  </nav>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a class="back-link" href="/knowledge/">&larr; Back to Knowledge Centre</a>
+    <span class="mono-label">Process &amp; Charges</span>
+    <h1 class="title">Demurrage vs Detention</h1>
+    <p class="lede">The two most commonly confused charges in container shipping, and confusing them is expensive — they run on different clocks, are billed by different parties, and are negotiated differently.</p>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="wrap">
+    <h2>The distinction</h2>
+    <p><strong>Demurrage</strong> is charged by the terminal or CFS — the custodian — for cargo or a container occupying their ground beyond the free period. It is, in effect, a real-estate charge: you're paying for space.</p>
+    <p><strong>Detention</strong> is charged by the shipping line for the container itself being held outside the terminal beyond free time. It is an equipment rental charge: you have their asset, and they want it back. On the export side, the mirror charges are pick-up detention (holding an empty container too long before use) and port storage.</p>
+
+    <div class="callout">
+      <p>The simplest way to keep the two straight: demurrage is about the ground the box sits on. Detention is about the box itself.</p>
+    </div>
+
+    <h2>Free time is negotiable, and worth negotiating</h2>
+    <p>Standard detention free time is commonly a matter of days, and can often be extended meaningfully for good volume — considerably more on project cargo. Demurrage free time at Indian CFSs is typically shorter, with a steeply escalating slab structure after it expires: a moderate rate for the first days beyond free time, then double, then triple or more.</p>
+    <p>Because these terms are negotiated at the carrier and CFS relationship level rather than fixed by regulation, extended free time is frequently worth more to an importer than a small discount on the freight rate itself — and it costs the carrier comparatively little to grant.</p>
+
+    <h2>Waivers</h2>
+    <p>Both charges are waivable where the delay is attributable to Customs (cargo held for testing or examination), to the carrier (vessel delay, wrong discharge), or to force majeure. A Detention Certificate issued by Customs is the usual instrument for making that case. Chasing these waivers systematically, rather than leaving them to whoever notices, is a real and quantifiable service on any account carrying meaningful volume.</p>
+
+    <h2>The trap this creates</h2>
+    <p>When duty and destination charges are advanced on a customer's behalf and the goods get held up in examination, demurrage can run past the value of the cargo itself — at which point a customer may simply abandon the consignment. The carrier and CFS still expect payment, and they pursue whoever signed for the container, not whoever owned the cargo. The charges keep accruing regardless of whose fault the delay is, which is exactly why they need to be tracked and flagged before free time runs out, not after.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
