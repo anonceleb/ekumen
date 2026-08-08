@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Nordic isn't EFTA — Ekumen</title>
+<meta name="description" content="A one-word mix-up in trade terminology, and what it taught us about precision in compliance work.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ekumen.in/blog/nordic-isnt-efta.html">
+<meta property="og:title" content="Nordic isn't EFTA">
+<meta property="og:description" content="A one-word mix-up in trade terminology, and what it taught us about precision in compliance work.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nordic isn't EFTA">
+<meta name="twitter:description" content="A one-word mix-up in trade terminology, and what it taught us about precision in compliance work.">
+
+<style>
+  :root {
+    --bg:             #FFFFFF;
+    --bg-alt:         #FAFAFA;
+    --surface:        #FFFFFF;
+    --surface-raised: #F4F4F6;
+    --border:         #EBEBEE;
+    --border-mid:     #DCDCE2;
+    --text:           #14141C;
+    --text-2:         #63636F;
+    --text-3:         #9C9CA8;
+    --accent:         #4550E5;
+    --accent-dim:     rgba(69,80,229,0.07);
+    --max:            1100px;
+    --font:           'Inter', system-ui, -apple-system, sans-serif;
+    --display:        'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono:           'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    display: block;
+  }
+
+  /* ── Nav ───────────────────────────────── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.wrap {
+    max-width: var(--max);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+  }
+
+  .wordmark {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .wordmark span { color: var(--accent); }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 7px 17px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { opacity: 0.82; }
+
+  /* ── Article ───────────────────────────── */
+  .article-header {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--accent); }
+
+  .article-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+
+  h1.title {
+    font-size: clamp(2rem, 4.4vw, 2.9rem);
+    font-weight: 300;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+  }
+
+  .article-body {
+    padding: 48px 0 96px;
+  }
+
+  .article-body p {
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-2);
+    margin-bottom: 22px;
+  }
+
+  .article-body h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin: 44px 0 18px;
+  }
+
+  /* ── Footer ─────────────────────────────── */
+  footer {
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .wrap {
+    max-width: var(--max);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+  </nav>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a class="back-link" href="/blog/">&larr; Back to blog</a>
+    <span class="mono-label">Field notes</span>
+    <h1 class="title">Nordic isn't EFTA</h1>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="wrap">
+    <p>Somewhere early on, we said "Nordic" when we meant something narrower, and it took a beat before anyone, including us, caught the difference. Worth writing down exactly where it breaks, because it isn't really a geography problem.</p>
+
+    <h2>What TEPA actually covers</h2>
+    <p>TEPA, the Trade and Economic Partnership Agreement between India and EFTA, entered into force on 1 October 2025. EFTA, the European Free Trade Association, has exactly four members: Switzerland, Norway, Iceland, and Liechtenstein. That's the whole bloc. Sweden, Denmark, and Finland are Nordic by geography and culture, but they're EU member states, not EFTA members, and India doesn't have a comparable agreement in force with the EU yet.</p>
+
+    <p>So "ship it as a Nordic import" and "ship it as a TEPA-preference import" aren't the same claim. One's a regional description. The other is a specific legal entitlement to a lower duty rate, available only if the goods originate in one of exactly four countries, and only if you can prove it.</p>
+
+    <h2>Why "prove it" is the operative phrase</h2>
+    <p>Before September 2020, an importer claiming preference under a trade agreement mostly needed a Certificate of Origin from the exporting country, and customs would generally take it at face value. CAROTAR 2020, the Customs (Administration of Rules of Origin under Trade Agreements) Rules, changed that. An importer claiming preferential treatment now has to affirmatively hold "sufficient information" on how the origin criteria in the specific agreement, wholly obtained, value addition, tariff-shift, whichever applies, were actually met. Customs can go back to the issuing authority in the exporting country to verify the claim, and can deny the preferential rate while that verification is pending, or after it fails.</p>
+
+    <p>That one rule shifted where the risk sits. A Certificate of Origin used to be close to the end of the compliance question. Under CAROTAR, it's closer to the start of one: the point at which customs can decide to ask harder questions, and the importer needs an answer ready, not assumed.</p>
+
+    <h2>Where that leaves a one-word mix-up</h2>
+    <p>Say "Nordic" instead of "EFTA" or "TEPA" in front of a CAROTAR-era customs desk and it isn't a rounding error. It's the difference between a claim backed by a specific agreement's rules-of-origin annex, and a claim with no agreement behind it at all. The rules don't grade on approximate geography, and neither does the officer reviewing the file.</p>
+
+    <p>We corrected the language once we caught it, and started treating "which agreement, precisely, and is it actually in force" as one of the first questions to settle, not a detail to confirm once the shape of the deal is already assumed.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
