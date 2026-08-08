@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Freight Forwarding Workflow &amp; Players — Ekumen</title>
+<meta name="description" content="Who does what in an international shipment: the players from shipper to consignee, and the step-by-step workflow that moves cargo between them.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ekumen.in/knowledge/freight-forwarding-workflow.html">
+<meta property="og:title" content="Freight Forwarding Workflow &amp; Players">
+<meta property="og:description" content="Who does what in an international shipment: the players from shipper to consignee, and the step-by-step workflow that moves cargo between them.">
+
+<style>
+  :root {
+    --bg: #FFFFFF; --bg-alt: #FAFAFA; --surface: #FFFFFF; --surface-raised: #F4F4F6;
+    --border: #EBEBEE; --border-mid: #DCDCE2; --text: #14141C; --text-2: #63636F; --text-3: #9C9CA8;
+    --accent: #4550E5; --max: 1100px;
+    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 32px; }
+  .mono-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); display: block; }
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  nav.wrap { max-width: var(--max); display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .wordmark { font-family: var(--display); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+  .wordmark span { color: var(--accent); }
+  .nav-links { display: flex; gap: 30px; font-size: 0.86rem; }
+  .nav-links a { color: var(--text-2); transition: color 0.15s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { font-size: 0.82rem; font-weight: 500; padding: 7px 17px; background: var(--accent); color: #fff; border-radius: 6px; transition: opacity 0.15s; white-space: nowrap; }
+  .nav-cta:hover { opacity: 0.82; }
+  .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.3rem; cursor: pointer; line-height: 1; padding: 4px; }
+  @media (max-width: 860px) {
+    .nav-links { display: none; position: absolute; top: 62px; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--border); padding: 8px 32px 16px; backdrop-filter: blur(14px); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--border); color: var(--text); }
+    .nav-links a:last-child { border-bottom: none; }
+    .nav-cta { display: none; }
+    .nav-toggle { display: block; }
+  }
+  .article-header { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
+  .back-link { display: inline-block; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 28px; transition: color 0.15s; }
+  .back-link:hover { color: var(--accent); }
+  .article-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+  h1.title { font-size: clamp(2rem, 4.4vw, 2.6rem); font-weight: 300; line-height: 1.14; letter-spacing: -0.03em; }
+  .article-header p.lede { margin-top: 18px; font-size: 1rem; color: var(--text-2); max-width: 58ch; line-height: 1.75; font-weight: 300; }
+  .article-body { padding: 44px 0 96px; }
+  .article-body p { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--text-2); margin-bottom: 20px; }
+  .article-body h2 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.015em; color: var(--text); margin: 40px 0 16px; }
+  .article-body ol, .article-body ul { margin: 0 0 28px 22px; }
+  .article-body li { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--text-2); margin-bottom: 10px; }
+  .article-body li strong { color: var(--text); font-weight: 500; }
+  .table-wrap { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--border); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: var(--bg-alt); text-align: left; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-2); font-weight: 300; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td strong, th strong { color: var(--text); font-weight: 500; }
+  .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); padding: 18px 20px; margin: 8px 0 28px; border-radius: 0 8px 8px 0; }
+  .callout p { margin-bottom: 0; font-size: 0.9rem; }
+  .related { margin-top: 8px; font-size: 0.9rem; }
+  .related a { color: var(--accent); }
+  .related a:hover { text-decoration: underline; }
+  footer { padding: 26px 0; border-top: 1px solid var(--border); }
+  footer .wrap { max-width: var(--max); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <div class="nav-links">
+      <a href="/#what-we-do">What we do</a>
+      <a href="/#freight">Freight management</a>
+      <a href="/#team">Team</a>
+      <a href="/blog/">Blog</a>
+      <a href="/knowledge/">Knowledge</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+  </nav>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a class="back-link" href="/knowledge/">&larr; Back to Knowledge Centre</a>
+    <span class="mono-label">Industry &amp; Players</span>
+    <h1 class="title">Freight forwarding workflow &amp; players</h1>
+    <p class="lede">A single container moving from a factory in one country to a warehouse in another passes through the hands of eight or nine distinct parties. Almost none of them work for the same company. Here is who does what, and in what order.</p>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="wrap">
+    <p>"Freight forwarder" gets used loosely to mean anyone who moves cargo internationally. In practice, a shipment is a relay: each party hands off a defined piece of the job to the next, against a defined document, for a defined fee. Knowing where one party's responsibility ends and the next one's begins is most of what it takes to read a quote or diagnose a delay.</p>
+
+    <h2>The players</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Party</th><th>Role</th></tr>
+        <tr><td><strong>Shipper / Exporter</strong></td><td>Owns the cargo at origin. Contracts the freight forwarder, produces the commercial invoice and packing list, and is named as consignor on the transport document.</td></tr>
+        <tr><td><strong>Consignee / Importer</strong></td><td>Owns the cargo at destination, or receives it on the owner's behalf. Named on the bill of lading or air waybill; responsible for import duty and clearance at the destination end.</td></tr>
+        <tr><td><strong>Freight forwarder</strong></td><td>The shipper's or consignee's agent for arranging carriage. Books space, consolidates cargo, prepares or checks shipping documents, coordinates the handoffs between every other party below. Does not itself own vessels, aircraft or trucks.</td></tr>
+        <tr><td><strong>Carrier (shipping line / airline)</strong></td><td>Owns or operates the vessel or aircraft and issues the master transport document (Master Bill of Lading or Master Air Waybill) for the physical move between ports or airports.</td></tr>
+        <tr><td><strong>NVOCC</strong></td><td>A non-vessel-operating carrier: contracts slot space from an ocean carrier in bulk, then sells it on to shippers under its own House Bill of Lading. Functions as a carrier to its customer and as a shipper to the vessel-owning line.</td></tr>
+        <tr><td><strong>Customs Broker / CHA</strong></td><td>Licensed under the CBLR to file the Shipping Bill (export) or Bill of Entry (import) and clear cargo through Customs on the importer's or exporter's behalf. A distinct licence from freight forwarding &mdash; see <a href="/knowledge/cblr-and-aeo-explained.html" style="color:var(--accent)">CBLR and AEO explained</a>.</td></tr>
+        <tr><td><strong>CFS / ICD operator</strong></td><td>Runs the off-dock facility where containers are stored, destuffed, examined by Customs if flagged, and handed over for onward transport. See <a href="/knowledge/dpd-vs-cfs.html" style="color:var(--accent)">DPD vs CFS</a>.</td></tr>
+        <tr><td><strong>Port / terminal operator</strong></td><td>Handles the vessel berth, container yard, and gate-in/gate-out at the port itself &mdash; separate from, and upstream of, the CFS.</td></tr>
+        <tr><td><strong>Transporter</strong></td><td>Moves the container or cargo by road or rail between port, CFS, warehouse and final delivery point. Usually subcontracted by the forwarder rather than a direct party to the shipper.</td></tr>
+        <tr><td><strong>Customs authority</strong></td><td>Assesses duty, examines cargo where risk-flagged, and issues the Let Export Order or Out of Charge that legally releases the shipment.</td></tr>
+        <tr><td><strong>Bank</strong></td><td>Handles payment instruments &mdash; letter of credit, documentary collection &mdash; and, on many routes, will not release shipping documents to the buyer until payment terms are satisfied.</td></tr>
+        <tr><td><strong>Insurer</strong></td><td>Covers marine or transit risk under a policy usually arranged by whichever party bears risk under the agreed Incoterm &mdash; see <a href="/knowledge/incoterms-2020-in-practice.html" style="color:var(--accent)">Incoterms 2020 in practice</a>.</td></tr>
+      </table>
+    </div>
+
+    <h2>The workflow, export side</h2>
+    <ol>
+      <li><strong>Booking.</strong> Shipper contracts the forwarder, who books space with a carrier or NVOCC and issues a booking confirmation with a cut-off date.</li>
+      <li><strong>Documentation.</strong> Shipper prepares the commercial invoice and packing list; forwarder or CHA prepares the Shipping Bill for filing on the ICEGATE customs portal.</li>
+      <li><strong>Stuffing.</strong> Cargo is loaded into the container, either at the shipper's factory (factory stuffing) or at a CFS.</li>
+      <li><strong>Customs clearance, export.</strong> The CHA files the Shipping Bill; Customs assesses and, if selected, examines the cargo before issuing the Let Export Order.</li>
+      <li><strong>Gate-in and loading.</strong> The container moves to the port, gates in against the vessel's cut-off, and is loaded onto the vessel or aircraft.</li>
+      <li><strong>Transport document issued.</strong> The carrier issues the Bill of Lading or Air Waybill; the forwarder issues its own House Bill to the shipper if operating as an NVOCC or consolidator.</li>
+    </ol>
+
+    <h2>The workflow, import side</h2>
+    <ol>
+      <li><strong>Arrival notice.</strong> The destination agent or forwarder notifies the consignee of the vessel or flight's arrival and sends the transport document.</li>
+      <li><strong>Bill of Entry filed.</strong> The CHA files the Bill of Entry on ICEGATE, usually before or on arrival, to allow duty assessment to begin early.</li>
+      <li><strong>Duty assessment and examination.</strong> Customs assesses duty; a risk-flagged consignment is routed for physical examination.</li>
+      <li><strong>Out of Charge.</strong> Once duty is paid and any examination cleared, Customs issues Out of Charge, releasing the cargo.</li>
+      <li><strong>Delivery.</strong> The container either moves under Direct Port Delivery straight to the consignee, or is destuffed at a CFS for cargo release and onward transport.</li>
+    </ol>
+
+    <div class="callout">
+      <p>The two licences that get conflated most often are the freight forwarder and the CHA. A forwarder can hold both roles under one roof, but they are legally distinct: forwarding is an unlicensed commercial service, while customs broking requires a CBLR licence tied to a named individual. When a shipment stalls at clearance rather than in transit, the CHA relationship is usually the one to check first.</p>
+    </div>
+
+    <p class="related">Related: <a href="/knowledge/index.html">Knowledge Centre</a> &middot; <a href="/knowledge/types-of-freight-forwarders-india.html">Types of freight forwarders &amp; how Indian FF is organised</a> &middot; <a href="/knowledge/shipping-documents-explained.html">Shipping documents explained</a> &middot; <a href="/blog/why-tools-arent-the-bottleneck.html">Everyone can build the tool now. Almost no one will use it.</a> on the blog</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks  = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.textContent = open ? '✕' : '☰';
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.textContent = '☰';
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
