@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Everyone can build the tool now. Almost no one will use it. — Ekumen</title>
+<meta name="description" content="On the ubiquity of tools in the AI age, and the low willingness among low- and mid-tier freight operators to pay for efficiency.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%235B6BF5'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='600' fill='%23ffffff'>E</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ekumen.in/blog/why-tools-arent-the-bottleneck.html">
+<meta property="og:title" content="Everyone can build the tool now. Almost no one will use it.">
+<meta property="og:description" content="On the ubiquity of tools in the AI age, and the low willingness among low- and mid-tier freight operators to pay for efficiency.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Everyone can build the tool now. Almost no one will use it.">
+<meta name="twitter:description" content="On the ubiquity of tools in the AI age, and the low willingness among low- and mid-tier freight operators to pay for efficiency.">
+
+<style>
+  :root {
+    --bg:             #FFFFFF;
+    --bg-alt:         #FAFAFA;
+    --surface:        #FFFFFF;
+    --surface-raised: #F4F4F6;
+    --border:         #EBEBEE;
+    --border-mid:     #DCDCE2;
+    --text:           #14141C;
+    --text-2:         #63636F;
+    --text-3:         #9C9CA8;
+    --accent:         #4550E5;
+    --accent-dim:     rgba(69,80,229,0.07);
+    --max:            1100px;
+    --font:           'Inter', system-ui, -apple-system, sans-serif;
+    --display:        'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --mono:           'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--display); }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    display: block;
+  }
+
+  /* ── Nav ───────────────────────────────── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.wrap {
+    max-width: var(--max);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+  }
+
+  .wordmark {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .wordmark span { color: var(--accent); }
+
+  .nav-cta {
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 7px 17px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { opacity: 0.82; }
+
+  /* ── Article ───────────────────────────── */
+  .article-header {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 28px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--accent); }
+
+  .article-header .mono-label { color: var(--accent); margin-bottom: 18px; }
+
+  h1.title {
+    font-size: clamp(2rem, 4.4vw, 2.9rem);
+    font-weight: 300;
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+  }
+
+  .article-body {
+    padding: 48px 0 96px;
+  }
+
+  .article-body p {
+    font-size: 1.02rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-2);
+    margin-bottom: 22px;
+  }
+
+  .article-body h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin: 44px 0 18px;
+  }
+
+  /* ── Footer ─────────────────────────────── */
+  footer {
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  footer .wrap {
+    max-width: var(--max);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="wordmark" href="/">Ek<span>u</span>men</a>
+    <a class="nav-cta" href="/#contact">Talk to us</a>
+  </nav>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a class="back-link" href="/blog/">&larr; Back to blog</a>
+    <span class="mono-label">Field notes</span>
+    <h1 class="title">Everyone can build the tool now. Almost no one will use it.</h1>
+  </div>
+</section>
+
+<section class="article-body">
+  <div class="wrap">
+    <p>We spent months talking to CFS operators, freight forwarders, and CHA firms about the tools they run. Going in, we expected to find gaps. What we found was something else.</p>
+
+    <p>One large CFS operator, handling roughly 7 lakh TEU a year, already runs a full yard-planning system plus custom software built for them years ago. A mid-tier freight forwarder we spoke to runs a modern invoicing platform alongside an internal system that's probably close to 15 years old, held together with Excel and email for everything the software doesn't cover. Another CFS we visited runs several disconnected tools with no single source of truth, and knows it.</p>
+
+    <p>None of them are short on software. Most of them are short on the will to change how they work.</p>
+
+    <h2>The tooling gap isn't the problem anymore</h2>
+    <p>A few years ago, building a working logistics tool was itself the pitch. Now it's a few weeks of engineering, sometimes less. Every operator we spoke with could already point to a tool that does most of what we were proposing to sell them.</p>
+
+    <p>What none of them could point to was a reason to switch.</p>
+
+    <p>Switching means retraining staff. It means trusting a small vendor to still be around in three years. And, quietly, it means admitting that the Excel-and-email workflow everyone already knows how to run is costing real money. For a business on thin margins, that's an expensive thing to admit, even when it's true.</p>
+
+    <h2>Efficiency is a hard sell to someone who's already coping</h2>
+    <p>This is the part that took us longest to accept. Most mid-tier operators know exactly where the leaks are: missed drawback claims, long-stay penalties, duty they didn't have to pay. They're not blind to it. They've just built a manual workaround for it, usually a person who remembers the rules and checks the spreadsheet by hand, and that workaround is good enough that disrupting it doesn't feel worth the trouble.</p>
+
+    <p>It's easy to sell efficiency software to someone in active pain. It's a much harder sell to someone who has absorbed the pain into their headcount long ago and simply stopped noticing it.</p>
+
+    <h2>We stopped treating this as a market failure</h2>
+    <p>Because it isn't one. It's just the current shape of the market, especially at the low and mid tier, and we don't expect that to change soon. Software availability was never the real constraint. The capacity to absorb change was, and that moves a lot slower than engineering does.</p>
+
+    <p>So we stopped pitching tools at operators who hadn't asked for one. We started building around the compliance and coordination work that has to happen either way, whether or not anyone's ready to modernize. If the willingness to pay for efficiency isn't there yet, you build for where the willingness already is, not for where it should be.</p>
+
+    <p>This isn't a complaint about the market. It's just where it stands right now, and probably where it'll stand for a while. Good to know going in.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
