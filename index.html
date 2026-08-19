@@ -639,6 +639,7 @@
     <div class="nav-links">
       <a href="#what-we-do">What we do</a>
       <a href="#freight">Freight management</a>
+      <a href="#privacy">Privacy engineering</a>
       <a href="#team">Team</a>
       <a href="/blog/">Blog</a>
       <a href="/knowledge/">Knowledge</a>
@@ -698,6 +699,44 @@
           <li>ML and signal systems: applied inference, sensor fusion, embedded design</li>
         </ul>
         <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Privacy engineering ── -->
+<section id="privacy">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <span class="mono-label">Privacy Engineering</span>
+      <h2>Address and phone numbers, <strong>without the plaintext copies.</strong></h2>
+      <p class="section-sub">An open-source project exploring how GDPR- and DPDP-grade data minimisation gets built into a delivery or contact flow from the start, instead of bolted on after a breach.</p>
+    </div>
+
+    <div class="bento reveal">
+      <div class="bento-card dark">
+        <span class="card-label">Open Source · Kestrel (CFP)</span>
+        <h3>A capability, not a shared secret</h3>
+        <p>Kestrel implements the Confidential Fulfilment Profile: a scoped, expiring, single-use, revocable grant to complete a delivery or a call, without the address or phone number ever crossing the network in the clear. Address is the first attribute; contact is the second. Submitted for consideration to the Digital Public Goods Alliance.</p>
+        <ul>
+          <li>Merchant and courier never store the raw address or number</li>
+          <li>Revocation is real: one vault, one place it has to take effect</li>
+          <li>Apache 2.0, reference implementation and protocol spec, both public</li>
+        </ul>
+        <a class="btn btn-primary" href="https://github.com/anonceleb/Kestrel" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+
+      <div class="bento-card">
+        <span class="card-label">Applied to Institutions</span>
+        <h3>Taking the same primitive to corporations</h3>
+        <p>Beyond the reference implementation, we're exploring how the same capability-grant model applies wherever GDPR and India's DPDP Act require data minimisation and revocable consent: institutions and corporations holding sensitive personal data they don't need to see, only need to act on.</p>
+        <ul>
+          <li>GDPR and DPDP-aligned data minimisation by design</li>
+          <li>Consent that expires and revokes, not just a checkbox on file</li>
+          <li>Early-stage: we're looking for institutions to shape this with</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Talk to us about privacy</a>
       </div>
     </div>
   </div>
@@ -833,6 +872,7 @@
           <select id="interest" name="interest">
             <option value="freight">Freight management engagement</option>
             <option value="advisory">Advisory engagement</option>
+            <option value="privacy">Privacy engineering (Kestrel / GDPR-DPDP)</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -850,7 +890,7 @@
 <!-- ── Footer ── -->
 <footer>
   <div class="wrap">
-    <div>© <span id="year"></span> Ekumen Digital Solutions LLP</div>
+    <div>© <span id="year"></span> Ekumen Digital Solutions LLP · LLPIN: ADB-3978</div>
     <div>Bengaluru, India</div>
   </div>
 </footer>
